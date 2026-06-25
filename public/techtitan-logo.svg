@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 268 48" width="268" height="48" fill="none"
+  role="img" aria-label="Tech Titan Logo">
+
+  <defs>
+    <!-- Embed Orbitron font from Google Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;display=swap');
+    </style>
+
+    <!-- Orange gradient: #ff7a00 → #ffb000 -->
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ff7a00"/>
+      <stop offset="100%" stop-color="#ffb000"/>
+    </linearGradient>
+
+    <!-- Highlight shimmer on icon top -->
+    <linearGradient id="g2" x1="0%" y1="0%" x2="40%" y2="100%">
+      <stop offset="0%"   stop-color="#ffdd88" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow for the icon -->
+    <filter id="glow-icon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b1"/>
+      <feColorMatrix in="b1" type="matrix"
+        values="1 0.4 0 0 1
+                0.4 0.2 0 0 0.3
+                0   0   0 0 0
+                0   0   0 0.9 0" result="c1"/>
+      <feMerge><feMergeNode in="c1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Glow for the text -->
+    <filter id="glow-text" x="-5%" y="-50%" width="110%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b2"/>
+      <feColorMatrix in="b2" type="matrix"
+        values="1 0.4 0 0 1
+                0.3 0.2 0 0 0.2
+                0   0   0 0 0
+                0   0   0 0.75 0" result="c2"/>
+      <feMerge><feMergeNode in="c2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- ICON — futuristic bold "T" / lightning bolt shape            -->
+  <!-- Fits in a 40×48 bounding box at x=0                         -->
+  <!-- ============================================================ -->
+  <g transform="translate(1, 1)" filter="url(#glow-icon)">
+
+    <!-- Horizontal top bar of T -->
+    <rect x="0" y="3" width="38" height="9" rx="1.5"
+          fill="url(#g1)"/>
+
+    <!-- Vertical stem of T -->
+    <rect x="14" y="12" width="10" height="18" rx="1"
+          fill="url(#g1)"/>
+
+    <!-- Lightning bolt tail pointing bottom-right -->
+    <polygon
+      points="13,30  24,30  18,46  8,46"
+      fill="url(#g1)"
+      opacity="0.9"/>
+
+    <!-- Inner highlight shimmer -->
+    <rect x="0" y="3" width="38" height="9" rx="1.5"
+          fill="url(#g2)" opacity="0.6"/>
+
+    <!-- Thin edge accent lines for crispness -->
+    <line x1="0.75" y1="3" x2="0.75" y2="12" stroke="#ffdd66" stroke-width="1" opacity="0.5"/>
+    <line x1="0"  y1="3.75" x2="38" y2="3.75" stroke="#ffdd66" stroke-width="0.8" opacity="0.35"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TEXT — "TECH TITAN" with Orbitron, orange gradient + glow   -->
+  <!-- ============================================================ -->
+  <g filter="url(#glow-text)">
+    <text
+      x="50" y="33"
+      font-family="'Orbitron', 'Exo 2', 'Rajdhani', 'Arial Black', Arial, sans-serif"
+      font-size="23"
+      font-weight="900"
+      letter-spacing="3.5"
+      fill="url(#g1)"
+      dominant-baseline="auto"
+    >TECH TITAN</text>
+  </g>
+
+  <!-- Thin accent line under text -->
+  <rect x="50" y="38.5" width="214" height="1.6" rx="0.8"
+    fill="url(#g1)" opacity="0.4"/>
+</svg>
