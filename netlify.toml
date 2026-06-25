@@ -6,7 +6,7 @@
 # SPA catch-all: serve index.html for all client-side routes
 [[redirects]]
   from = "/api/*"
-  to = "https://your-backend.up.railway.app/api/:splat"
+  to = "https://techtitanbackend-production.up.railway.app/api/:splat"
   status = 200
   force = true
 
